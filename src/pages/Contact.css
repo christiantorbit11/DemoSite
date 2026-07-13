@@ -1,0 +1,203 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.contact-card {
+  background: #fffdf7;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  padding: clamp(28px, 4vw, 48px);
+  box-shadow: var(--shadow-soft);
+}
+.contact-card h2 {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  margin-bottom: 0.7em;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.contact-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  color: var(--color-forest-800);
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  padding: 12px 14px;
+  border: 1px solid rgba(74, 68, 54, 0.3);
+  background: #fffefb;
+  color: var(--color-ink);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--color-gold-500);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.18);
+}
+.contact-form button {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+.contact-form__note {
+  font-size: 0.85rem;
+  color: #8a8267;
+  font-style: italic;
+  margin: 0;
+}
+
+.contact-success {
+  background: rgba(35, 64, 47, 0.06);
+  border-left: 3px solid var(--color-forest-700);
+  padding: 24px 26px;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+}
+.contact-success p { margin-bottom: 0.6em; }
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.contact-info__block h3 {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-600);
+  margin-bottom: 12px;
+}
+.contact-info__block a,
+.contact-info__block p {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-forest-800);
+  margin-bottom: 6px;
+}
+.contact-info__phone {
+  font-family: var(--font-display);
+  font-size: 1.6rem !important;
+  color: var(--color-forest-900) !important;
+}
+.contact-info__emergency {
+  color: var(--color-gold-600) !important;
+  font-style: italic;
+}
+.contact-info__license {
+  font-size: 0.9rem !important;
+  color: #8a8267 !important;
+}
+.contact-info__hours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-info__hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+  font-family: var(--font-serif);
+  font-size: 1.02rem;
+  color: var(--color-forest-800);
+}
+
+/* Service map */
+.service-map {
+  position: relative;
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  padding: 56px 40px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(201, 162, 39, 0.12), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(201, 162, 39, 0.06) 0, rgba(201, 162, 39, 0.06) 1px, transparent 1px, transparent 42px),
+    repeating-linear-gradient(90deg, rgba(201, 162, 39, 0.06) 0, rgba(201, 162, 39, 0.06) 1px, transparent 1px, transparent 42px);
+}
+
+.service-map__pin {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.service-map__dot {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background: var(--color-gold-500);
+  border-radius: 50%;
+}
+.service-map__dot::before,
+.service-map__dot::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 1px solid var(--color-gold-500);
+  border-radius: 50%;
+  opacity: 0;
+  animation: ping 2.4s ease-out infinite;
+}
+.service-map__dot::after {
+  animation-delay: 1.2s;
+}
+@keyframes ping {
+  0% { transform: scale(0.6); opacity: 0.8; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+.service-map__label {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-gold-100);
+}
+
+.service-map__towns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+.service-map__town {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--color-cream-dim);
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  padding: 8px 18px;
+  border-radius: 999px;
+  animation: float 4.5s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-form__row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .service-map { padding: 40px 20px; }
+}
