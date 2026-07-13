@@ -1,0 +1,40 @@
+:root {
+  /* Victorian gentleman's club palette */
+  --color-forest-950: #0c1712;
+  --color-forest-900: #12211a;
+  --color-forest-800: #1a2f23;
+  --color-forest-700: #23402f;
+  --color-forest-600: #2f5540;
+
+  --color-mahogany-900: #2a1210;
+  --color-mahogany-800: #3d1a16;
+  --color-mahogany-700: #4a2c2a;
+  --color-mahogany-600: #63332c;
+
+  --color-gold-100: #f6ecc9;
+  --color-gold-300: #e8cd7d;
+  --color-gold-500: #c9a227;
+  --color-gold-600: #a8811a;
+  --color-gold-700: #8a6a15;
+
+  --color-cream: #f3ead6;
+  --color-cream-dim: #e6d9bb;
+  --color-parchment: #efe4cb;
+
+  --color-ink: #17140f;
+
+  --gradient-gold: linear-gradient(135deg, #f6ecc9 0%, #c9a227 45%, #8a6a15 55%, #e8cd7d 100%);
+  --gradient-forest: linear-gradient(160deg, var(--color-forest-900) 0%, var(--color-forest-800) 55%, var(--color-mahogany-900) 130%);
+
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-serif: "Cormorant Garamond", "Georgia", serif;
+  --font-body: "EB Garamond", "Georgia", serif;
+
+  --shadow-soft: 0 20px 60px -20px rgba(0, 0, 0, 0.55);
+  --shadow-gold: 0 0 0 1px rgba(201, 162, 39, 0.35), 0 12px 40px -12px rgba(201, 162, 39, 0.25);
+
+  --radius-sm: 4px;
+  --radius-md: 10px;
+
+  --max-width: 1240px;
+}
